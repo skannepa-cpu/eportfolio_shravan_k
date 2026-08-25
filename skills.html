@@ -3,8 +3,108 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Skills — Your Name</title>
+  <title>Skills — Shravan</title>
   <link rel="stylesheet" href="css/style.css" />
+  <style>
+    /* Modern visual upgrades for skills layout */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+
+    .skill-card {
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 12px;
+      padding: 1.5rem;
+      transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .skill-card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(255, 255, 255, 0.25);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    }
+
+    .skill-card-header {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      margin-bottom: 1.25rem;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      padding-bottom: 0.75rem;
+    }
+
+    .skill-card-header h3 {
+      margin: 0;
+      font-size: 1.25rem;
+      font-weight: 600;
+    }
+
+    .chip-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+    }
+
+    .skill-chip {
+      display: inline-flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.5rem;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 8px;
+      padding: 0.4rem 0.75rem;
+      font-size: 0.9rem;
+      transition: background 0.2s ease, border-color 0.2s ease;
+    }
+
+    .skill-chip:hover {
+      background: rgba(255, 255, 255, 0.1);
+      border-color: rgba(255, 255, 255, 0.3);
+    }
+
+    .level-tag {
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      padding: 0.15rem 0.4rem;
+      border-radius: 4px;
+      font-weight: 600;
+    }
+
+    .level-advanced {
+      background: rgba(52, 211, 153, 0.15);
+      color: #34d399;
+    }
+
+    .level-proficient {
+      background: rgba(96, 165, 250, 0.15);
+      color: #60a5fa;
+    }
+
+    .level-intermediate {
+      background: rgba(251, 191, 36, 0.15);
+      color: #fbbf24;
+    }
+
+    .soft-chip {
+      background: rgba(167, 139, 250, 0.1);
+      border: 1px solid rgba(167, 139, 250, 0.25);
+      color: #c084fc;
+      border-radius: 20px;
+      padding: 0.4rem 0.85rem;
+      font-size: 0.875rem;
+      font-weight: 500;
+    }
+
+    .soft-chip:hover {
+      background: rgba(167, 139, 250, 0.2);
+    }
+  </style>
 </head>
 <body>
 
@@ -25,97 +125,77 @@
 
 <section class="section">
   <div class="container">
-    <h2 class="section-title">Skills</h2>
-    <p class="section-sub">Technical proficiencies and soft skills I've built over time.</p>
+    <h2 class="section-title">Skills &amp; Expertise</h2>
+    <p class="section-sub">Core technical stack, engineering toolsets, and soft skills.</p>
 
-    <div class="grid">
+    <div class="skills-grid">
 
-      <!-- Technical skills with CSS progress bars -->
-      <div class="card">
-        <h3>Languages</h3>
-        <div class="skill-list" style="margin-top:1rem;">
-
-          <div class="skill-item">
-            <label><span>Python</span><span>90%</span></label>
-            <div class="skill-bar">
-              <div class="skill-bar-fill" style="width:90%"></div>
-            </div>
-          </div>
-
-          <div class="skill-item">
-            <label><span>JavaScript</span><span>50%</span></label>
-            <div class="skill-bar">
-              <div class="skill-bar-fill" style="width:50%"></div>
-            </div>
-          </div>
-
-          <div class="skill-item">
-            <label><span>Java</span><span>50%</span></label>
-            <div class="skill-bar">
-              <div class="skill-bar-fill" style="width:50%"></div>
-            </div>
-          </div>
-
-          <div class="skill-item">
-            <label><span>C++</span><span>75%</span></label>
-            <div class="skill-bar">
-              <div class="skill-bar-fill" style="width:75%"></div>
-            </div>
-          </div>
-
-          <div class="skill-item">
-            <label><span>Matlab</span><span>90%</span></label>
-            <div class="skill-bar">
-              <div class="skill-bar-fill" style="width:90%"></div>
-            </div>
-          </div>
-
+      <!-- Languages -->
+      <div class="skill-card">
+        <div class="skill-card-header">
+          <h3>Languages</h3>
         </div>
-      </div>
-
-      <!-- Frameworks & Tools -->
-      <div class="card">
-        <h3>Engineering Softwares</h3>
-        <div class="skill-list" style="margin-top:1rem;">
-
-          <div class="skill-item">
-            <label><span>Fusion 360 & Solidworks</span><span>90%</span></label>
-            <div class="skill-bar">
-              <div class="skill-bar-fill" style="width:90%"></div>
-            </div>
+        <div class="chip-container">
+          <div class="skill-chip">
+            <span>Python</span>
+            <span class="level-tag level-advanced">Advanced</span>
           </div>
-
-          <div class="skill-item">
-            <label><span>OpenRocket</span><span>50%</span></label>
-            <div class="skill-bar">
-              <div class="skill-bar-fill" style="width:50%"></div>
-            </div>
+          <div class="skill-chip">
+            <span>Matlab</span>
+            <span class="level-tag level-advanced">Advanced</span>
           </div>
-
-          <div class="skill-item">
-            <label><span>Google Sheets</span><span>75%</span></label>
-            <div class="skill-bar">
-              <div class="skill-bar-fill" style="width:75%"></div>
-            </div>
+          <div class="skill-chip">
+            <span>C++</span>
+            <span class="level-tag level-proficient">Proficient</span>
+          </div>
+          <div class="skill-chip">
+            <span>JavaScript</span>
+            <span class="level-tag level-intermediate">Intermediate</span>
+          </div>
+          <div class="skill-chip">
+            <span>Java</span>
+            <span class="level-tag level-intermediate">Intermediate</span>
           </div>
         </div>
       </div>
 
-      <!-- Soft skills -->
-      <div class="card">
-        <h3>Soft Skills &amp; Interests</h3>
-        <p style="margin-bottom:.5rem;">Things beyond the code.</p>
-        <div class="soft-grid">
-          <span class="soft-badge">Technical Writing</span>
-          <span class="soft-badge">Public Speaking</span>
-          <span class="soft-badge">Team Leadership</span>
-          <span class="soft-badge">Mentoring</span>
-          <span class="soft-badge">Research</span>
-          <span class="soft-badge">Problem Solving</span>
+      <!-- Engineering Software -->
+      <div class="skill-card">
+        <div class="skill-card-header">
+          <h3>Engineering Software</h3>
+        </div>
+        <div class="chip-container">
+          <div class="skill-chip">
+            <span>Fusion 360 &amp; Solidworks</span>
+            <span class="level-tag level-advanced">Advanced</span>
+          </div>
+          <div class="skill-chip">
+            <span>Google Sheets</span>
+            <span class="level-tag level-proficient">Proficient</span>
+          </div>
+          <div class="skill-chip">
+            <span>OpenRocket</span>
+            <span class="level-tag level-intermediate">Intermediate</span>
+          </div>
         </div>
       </div>
 
-    </div><!-- /.grid -->
+      <!-- Soft Skills -->
+      <div class="skill-card">
+        <div class="skill-card-header">
+          <h3>Soft Skills &amp; Focus Areas</h3>
+        </div>
+        <div class="chip-container">
+          <span class="soft-chip">Technical Writing</span>
+          <span class="soft-chip">Public Speaking</span>
+          <span class="soft-chip">Team Leadership</span>
+          <span class="soft-chip">Mentoring</span>
+          <span class="soft-chip">Research</span>
+          <span class="soft-chip">Problem Solving</span>
+        </div>
+      </div>
+
+    </div><!-- /.skills-grid -->
   </div>
 </section>
 
